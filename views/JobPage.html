@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreMest | Jobs Page</title>
+    <link rel="stylesheet" href="../styles/JobPage.css"/>
+    
+<!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/query-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/290e4dbc0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <!-- Navbar -->
+     <!-- Search bar -->
+     <!-- Side bar -->
+     <div class="btn">
+        <span><i class="fas fa-bars"></i></span>
+     </div>
+        <nav class="sidebar">
+            <div class="text">Filter By : </div>
+            <ul>
+                <li>
+                   <a href="#" class="emtype_btn"> Employment Type
+                   <span ><i class="fas fa-caret-down first"></i> </span>
+                
+                </a>
+                    <ul class="emtype_show">
+                        <li><a href="#" >
+                            <input type="checkbox"/>
+                            Full time
+                            <span>50</span>
+                        </a></li>
+                        <li><a href="#">Part time </a></li>
+                        <li><a href="#">Remote </a></li>
+                        <li><a href="#">Internship </a></li>
+                    </ul>
+                </li> 
+
+
+                <li>
+                    <a href="#" class="cat-btn">Category
+                        <span ><i class="fas fa-caret-down second"></i> </span>
+                    </a>
+                     <ul class="cat-show">
+                         <li><a href="#">Programming </a></li>
+                         <li><a href="#">Digital Marketing </a></li>
+                         <li><a href="#">Others </a></li>
+                        
+                     </ul>
+                 </li> 
+            </ul>
+
+           
+        </nav>
+
+        <!-- Scripts for side bar -->
+        <script>
+            $('.btn').click(function(){
+               $(this).toggleClass("click") 
+               $('.sidebar').toggleClass("show") 
+            });
+
+            $('.emtype_btn').click(function(){
+                $('nav ul .emtype_show').toggleClass("show")
+                $('nav ul .first').toggleClass("rotate")
+          
+            });
+
+            $('.cat-btn').click(function(){
+                $('nav ul .cat-show').toggleClass("show1")
+                $('nav ul .second').toggleClass("rotate")
+            });
+            $('nav ul li ').click(function(){
+                $(this).addClass("active").siblings().removeClass("active")
+            })
+
+        </script>
+     <!-- job cards -->
+     <!-- Footer -->
+</body>
+</html>
